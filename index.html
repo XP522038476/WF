@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/mediaelement-and-player.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="">
+<link rel="stylesheet" href="css/mediaelementplayer.min.css" />
+<style type="text/css">
+#bgdiv 	{ background-color:black; height:100%; width:100%; position:absolute;z-index:0;}
+#fgdiv 	{ background-color:white; height:100%; width:100%; position:absolute;z-index:4; display:none;}
+#music 	{ background-color:; height:100%; width:100%; top:6%; left:3%; position:absolute;z-index:2; display:none;}
+#maindiv{ font-family:Microsoft JhengHei; background-color:; height:100% ; width:100%; position:absolute; z-index:1;}
+#worddiv{ background:rgba(255,204,51,0.5); height:150px; width:100%; top:18%; left:5%; position:absolute; z-index:3;}
+#div1	{ background:rgba(255,204,51,0.4); height:5px; width:100%; top:41%; left:7%; position:absolute; z-index:3;}
+#div2	{ background:rgba(255,204,51,0.3); height:2px; width:100%; top:43%; left:10%; position:absolute; z-index:3;}
+#p1		{ font-style:italic; font-size:500%; margin:0px;}
+#p2		{ font-style:italic; font-size:200%; margin:0px; text-align:center;}
+#footer	{ color:white; height:20px; width:100%; top:80%; position:absolute; z-index:3; text-align:center; z-index:3;}
+body 	{ background: url(picture/welcome.jpg) no-repeat center center fixed; margin:0px; padding:0px; overflow:hidden; background-size: cover;}
+a		{text-decoration:none; text-decoration:none; color:white;}
+#skip{
+			position:absolute; 
+			top:40%;
+			left:40%;
+			height:100%; 
+			width:100%; 
+			overflow:hidden;
+			display:;
+			}
+#li1{
+			position:absolute;
+			font-size:500%;
+			width:100%;
+			height:100%;
+			list-style: none;
+			overflow:hidden;
+			animation:change1 10s;
+			}
+#li2{
+			position:absolute;
+			font-size:500%;
+			width:100%;
+			height:100%;
+			list-style: none;
+			overflow:hidden;
+			animation:change2 10s;
+			}
+#li3{
+			position:absolute;
+			font-size:500%;
+			width:100%;
+			height:100%;
+			list-style: none;
+			overflow:hidden;
+			animation:change3 10s;
+			}
+#li4{
+			position:absolute;
+			font-size:500%;
+			width:100%;
+			height:100%;
+			list-style: none;
+			overflow:hidden;
+			animation:change4 10s;
+			}
+@keyframes change1{
+					0%		{color:black;}
+					25%		{color:white;}
+					50%		{color:black;}
+					75%	    {color:black;}
+					100%	{color:black;}
+					}
+@keyframes change2{
+					0%		{color:black;}
+					25%		{color:black;}
+					50%		{color:white;}
+					75%	    {color:black;}
+					100%	{color:black;}
+					}
+@keyframes change3{
+					0%		{color:black;}
+					25%		{color:black;}
+					50%		{color:black;}
+					75%	    {color:white;}
+					100%	{color:black;}
+					}
+@keyframes change4{
+					0%		{color:black;}
+					25%		{color:black;}
+					50%		{color:black;}
+					75%	    {color:black;}
+					100%	{color:white;}
+					}					
+</style>
+<script>
+function time(){
+    setTimeout(function(){				
+				$("#fgdiv").fadeIn(10);
+				$("#fgdiv").fadeOut(3000);
+				$("#bgdiv").fadeOut(7000);
+				$("#skip").css('display','none'); 
+				$("#music").css('display','block'); 
+    },10900);
+}
+$(document).ready(function(){  
+                $("#skip").mouseover(function(){   
+                    $(this).css("cursor","Pointer");  
+                });  
+});  
+$(document).ready(function(){
+  $("#skip").click(function(){
+	location.href = "main.html";
+  });
+});
+$(document).ready(function(){
+  $("#worddiv").mouseover(function(){ 
+    $(this).css("cursor","Pointer");  
+  });  
+  $("#worddiv").click(function(){ 
+	location.href = "main.html";
+  });
+});
+</script>
+</head>
+
+<body onLoad="time(); player.play();">
+<div id="fgdiv"></div>
+<div id="maindiv">
+	<div id="music">
+	<audio id="player" src="music/Cytus.mp3" type="audio/mp3" controls="controls">		
+	</audio>	
+	<script>
+	$('audio,video').mediaelementplayer();
+	$(document).ready(function(){
+		$("button").click(function(){
+			player.play();     
+		});
+	});
+    </script>
+		<div id="worddiv">
+			<p id="p1">&nbsp;Everything For Game!</p>
+			<p id="p2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们就在这里!</p>
+		</div>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="footer">
+			<p>
+				&copy;2016-12&nbsp;<strong>Wild-Fantasy&nbsp;Group</strong>&nbsp;by&nbsp;渋谷の猫&nbsp;|&nbsp;<a
+					href="mailto:522038476@qq.com">Contact E-mail:&nbsp;522038476@qq.com</a>
+			</p>
+		</div>
+	</div>
+	<ul id="skip">
+		<li id="li1">私&nbsp;&nbsp;&nbsp;&nbsp;は</li>
+		<li id="li2">いつも</li>
+		<li id="li3">ここに</li>
+		<li id="li4">いるよ！</li>
+	</ul>
+</div>
+<div id="bgdiv"></div>
+</body>
+</html>
