@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+#middle div				{ border-style:solid; border-color:red; color:red;}
+body					{ background-color:#303030; margin:0px; padding:0px;}
+
+#language				{ float:right;}
+
+header{	
+		background-color:black;
+		position:relative;
+		height:40px; 
+		width:100%;
+		margin:0px;
+		padding:0px;
+		z-index:1;
+		overflow:hidden;
+		border-width:0 0 1px 0;
+		border-style:solid;
+		border-color:#333333;
+	}	
+footer{
+		background-color:black;
+		position:fixed;
+		height:100px; 
+		width:100%;
+		margin:0px;
+		padding:0px;
+		z-index:0;
+		bottom:0;
+	}
+#middle{
+		background-color:;
+		position:relative;
+		height:100%;
+		width:100%;
+		margin:0px;
+		padding:0px;
+	}
+
+#blog{
+		background-color:black;
+		position:relative;
+		height:100px;
+		width:150px;
+		margin:10px;
+		padding:0px;
+		float:left;
+	}
+#essay{
+		background-color:black;
+		position:relative;
+		height:100px;
+		width:150px;
+		margin:10px;
+		padding:0px;
+		float:left;
+	}
+#photography{
+		background-color:black;
+		position:relative;
+		height:100px;
+		width:150px;
+		margin:10px;
+		padding:0px;	
+		float:left;
+	}
+#me{
+		background-color:black;
+		position:relative;
+		height:100px;
+		width:150px;
+		margin:10px;
+		padding:0px;
+		float:left;
+	}
+#group{
+		background-color:black;
+		position:relative;
+		height:100px;
+		width:150px;
+		margin:10px;
+		padding:0px;
+		float:left;		
+	}

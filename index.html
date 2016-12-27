@@ -7,18 +7,18 @@
 <link rel="shortcut icon" type="image/x-icon" href="">
 <link rel="stylesheet" href="css/mediaelementplayer.min.css" />
 <style type="text/css">
-#bgdiv 	{ background-color:black; height:100%; width:100%; position:absolute;z-index:0;}
-#fgdiv 	{ background-color:white; height:100%; width:100%; position:absolute;z-index:4; display:none;}
-#music 	{ background-color:; height:100%; width:100%; top:6%; left:3%; position:absolute;z-index:2; display:none;}
+#bgdiv 	{ background-color:black; height:100%; width:100%; position:absolute; z-index:0;}
+#fgdiv 	{ background-color:white; height:100%; width:100%; position:absolute; z-index:4; display:none;}
+#music 	{ background-color:; height:100%; width:100%; top:50px; left:3%; position:absolute;z-index:2; display:none;}
 #maindiv{ font-family:Microsoft JhengHei; background-color:; height:100% ; width:100%; position:absolute; z-index:1;}
-#worddiv{ background:rgba(255,204,51,0.5); height:150px; width:100%; top:18%; left:5%; position:absolute; z-index:3;}
-#div1	{ background:rgba(255,204,51,0.4); height:5px; width:100%; top:41%; left:7%; position:absolute; z-index:3;}
-#div2	{ background:rgba(255,204,51,0.3); height:2px; width:100%; top:43%; left:10%; position:absolute; z-index:3;}
-#p1		{ font-style:italic; font-size:500%; margin:0px;}
-#p2		{ font-style:italic; font-size:200%; margin:0px; text-align:center;}
-#footer	{ color:white; height:20px; width:100%; top:80%; position:absolute; z-index:3; text-align:center; z-index:3;}
-body 	{ background: url(picture/welcome.jpg) no-repeat center center fixed; margin:0px; padding:0px; overflow:hidden; background-size: cover;}
-a		{text-decoration:none; text-decoration:none; color:white;}
+#worddiv{ background:rgba(255,204,51,0.5); height:150px; width:100%; top:130px; left:5%; position:absolute; z-index:3;}
+#div1	{ background:rgba(255,204,51,0.4); height:5px; width:100%; top:260px; left:7%; position:relative; z-index:3;}
+#div2	{ background:rgba(255,204,51,0.3); height:2px; width:100%; top:269px; left:10%; position:relative; z-index:3;}
+#p1		{ font-style:italic; font-size:500%; margin:0px; text-align:left; white-space:nowrap;}
+#p2		{ font-style:italic; font-size:200%; margin:0px; text-align:center; white-space:nowrap;}
+#footer	{ color:white; height:20px; width:100%; top:80%; position:absolute; z-index:3; text-align:center; z-index:3; white-space:nowrap;}
+body 	{ background: url(picture/welcome.jpg) no-repeat center -20px fixed; margin:0px; padding:0px; overflow:hidden; background-size: cover;}
+a		{ text-decoration:none; color:white;}
 #skip{
 			position:absolute; 
 			top:40%;
@@ -96,12 +96,12 @@ a		{text-decoration:none; text-decoration:none; color:white;}
 <script>
 function time(){
     setTimeout(function(){				
-				$("#fgdiv").fadeIn(10);
-				$("#fgdiv").fadeOut(3000);
+				$("#fgdiv").fadeIn(5);
+				$("#fgdiv").fadeOut(4000);
 				$("#bgdiv").fadeOut(7000);
 				$("#skip").css('display','none'); 
 				$("#music").css('display','block'); 
-    },10900);
+    },11000);
 }
 $(document).ready(function(){  
                 $("#skip").mouseover(function(){   
@@ -128,7 +128,7 @@ $(document).ready(function(){
 <div id="fgdiv"></div>
 <div id="maindiv">
 	<div id="music">
-	<audio id="player" src="music/Cytus.mp3" type="audio/mp3" controls="controls">		
+	<audio id="player" src="music/Cytus.mp3" type="audio/mp3" controls="controls" >		
 	</audio>	
 	<script>
 	$('audio,video').mediaelementplayer();
