@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/nav-hidden.js"></script>
 <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
 <script src="js/mediaelement-and-player.min.js"></script>
-<link rel="shortcut icon" type="image/x-icon" href="">
+<link rel="shortcut icon" type="image/x-icon" href="picture/wf.ico">
 <!-- <link rel="stylesheet" href="css/bootstrap.min.css"/> -->
 <link rel="stylesheet" href="css/main.css"/>
 <link rel="stylesheet" href="css/nav-style.css"/>
@@ -13,47 +15,33 @@
 
 </style>
 <script>
-	function addListener(element, type, callback) {
-		if (element.addEventListener) {
-			element.addEventListener(type, callback);
-		} else if (element.attachEvent) {
-			element.attachEvent('on' + type, callback);
-		}
-	}
+$(document).ready(function(){
+  $("#mark").mouseover(function(){ 
+    $(this).css("cursor","Pointer");  
+  });  
+  $("#mark").click(function(){ 
+	location.href = "index.html";
+  });
+});
 
-	addListener(document, 'DOMContentLoaded', function () {
-		
-		var mq = window.matchMedia("(max-width: 760px)");
-		if (mq.matches) {
-			document.getElementById("menu_list").classList.add("hidden");
-		}
-
-		addListener(document.getElementById("menu_button"), 'click', function () {
-			document.getElementById("menu_list").classList.toggle("hidden");
-		});
-		
-		addListener(window, 'resize', function () {
-			var width = window.innerWidth ||
-						document.documentElement.clientWidth ||
-						document.body.clientWidth;
-			
-			if (width > 760) {
-				document.getElementById("menu_list").classList.remove("hidden");
-			} else {
-				document.getElementById("menu_list").classList.add("hidden");
-			}
-		});
-		
-	});
 </script>
 </head>
 
 <body >
-<header>
-
-</header>
-
+<div class="mainbody">
+<header class="top">
+<div id="banner">
+	<ul id="language">
+		<li><a href="#">中文</a></li>
+		<li class="current_language"><a href="#">ENGLISH</a></li>
+		<li><a href="#">日本語</a></li>
+	</ul>
+</div>
 <nav>
+	<div id="mark">
+		<img id="wf" src="picture/wf.ico"/>
+		<h3>Wild Fantasy</h3>	
+	</div>
 	<div id="menu_button_wrapper">
 		<div id="menu_button">
 			Menu&nbsp;&nbsp;
@@ -65,7 +53,6 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	
 	<ul id="menu_list">
 		<li class="current_page"><a href="#">Home</a></li>
 		<li><a href="#">Audio</a></li>
@@ -74,16 +61,55 @@
 		<li><a href="#">Contacts</a></li>
 	</ul>
 </nav>
-
+</header>
 <div id="middle">
- 	<div id="blog">111</div>
-	<div id="essay">111</div>
-	<div id="photography">111</div>
- 	<div id="me">111</div>
-	<div id="group">111</div> 
-</div>
+	<div class="banpic">???</div>
+ 	<div class="blog"><div class="miku"></div>
+		
+	111</div>
+	<div class="blog"><div class="miku"></div>
+		
+	111</div>
+	<div class="log">			<!-- log固定位置 -->
+		
+	log</div>
+	<div class="photography"><div class="lin"></div>
+		
+	333</div>
+	
+	<div class="fill1"></div>	<!-- 填充div -->
+	
+	<div class="group"><div class="kaito"></div>
+
+	444</div> 
+	<div class="group"><div class="kaito"></div>
+		
+	444</div> 
+	
+	<div class="fill2"></div>	<!-- 填充div -->
+	
+	<div class="photography"><div class="lin"></div>
+		
+	333</div>	
+	<div class="essay"><div class="meiko"></div>
+		
+	222</div>
+	<div class="essay"><div class="meiko"></div>
+		
+	222</div>
+	<div class="essay"><div class="meiko"></div>
+		
+	222</div>
+
+
+<!--  		<div class="test">111</div> 
+		<div class="test">111</div> 
+		<div class="test">111</div> 
+		<div class="test">111</div>  -->
 <footer>
 222
-</footer>
+</footer>		
+</div>			
+</div>
 </body>
 </html>

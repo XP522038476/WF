@@ -1,11 +1,40 @@
 @charset "utf-8";
 /* CSS Document */
-#middle div				{ border-style:solid; border-color:red; color:red;}
-body					{ background-color:#303030; margin:0px; padding:0px;}
-
-#language				{ float:right;}
-
-header{	
+#middle div			{ border-style:; border-color:red; color:red;}
+body				{ background-color:#161E2C; margin:0px; padding:0px; font-family: 'Open Sans', sans-serif; overflow-x: hidden;}/* #303030; */
+h3					{ float:left; margin-top:12px; margin-right:20px;color:#FFBFCB;}
+#mark				{ float:left; margin-top:0px;}
+#wf					{ float:left; width:30px; height:30px; margin:8px 2px 0px 20px;}
+#language			{ float:right; font-family: SimHei; margin:0px;}
+#language li			{ float:left; list-style:none; margin-right:5px; display: inline-block;}
+#language li a			{ color: #9d9d9d; text-decoration:none; font-weight: bold; display: inline-block; box-sizing: border-box; padding: 11px;}
+#language li a:hover	{ color: #FFBFCB;}	 
+.current_language	{ background-color: #222;}
+.top #banner #language .current_language a	{ color: #FFBFCB;}
+.top{
+		position:fixed;
+		width:100%;
+		margin:0px;
+		padding:0px;
+		top:0px;
+		z-index:1;
+		transition: transform .5s;
+		filter:alpha(Opacity=80);
+		-moz-opacity:0.8;
+		opacity: 0.8;	
+}
+.top.is-hidden{
+					transform: translateY(-100%);
+}
+.mainbody{
+		float: left;
+		width: 100%;
+		background: url(../picture/hatunemiku2.jpg) no-repeat top center;
+		background-size:cover;
+ 		background-attachment: fixed;
+		margin-top:90px;
+}
+#banner{	
 		background-color:black;
 		position:relative;
 		height:40px; 
@@ -16,69 +45,143 @@ header{
 		overflow:hidden;
 		border-width:0 0 1px 0;
 		border-style:solid;
-		border-color:#333333;
+		border-color:#FFBFCB;
+		color:#FFBFCB;
+		top:0px;
 	}	
+#middle{
+		background-color:;
+		position:relative;
+		height:1500px;
+		width:100%;
+		margin:0px;
+		padding:0px;
+		top:0px;
+	}
+.banpic{
+		background-color:black;
+		position:relative;
+		height:150px;
+		width:90%;
+		margin-top:20px;
+		margin-left:auto; 
+		margin-right:auto;
+		margin-bottom:0px;
+		padding:0px;
+		min-width:330px;
+		vertical-align: middle;
+		text-align:center; 
+		filter:alpha(Opacity=60);
+		-moz-opacity:0.6;
+		opacity: 0.6;
+}
+.blog{
+		background-color:black;
+		position:relative;
+		height:20%;
+		width:28%;
+		margin:5px 5px 0px 5px;
+		padding:0px;
+		float:left;
+		min-width:330px;
+		left:6%;
+		filter:alpha(Opacity=60);
+		-moz-opacity:0.6;
+		opacity: 0.6;	
+	}
+.photography{
+		background-color:black;
+		position:relative;
+		height:20%;
+		width:28%;
+		margin:5px 5px 0px 5px;
+		padding:0px;
+		float:left;
+		min-width:330px;
+		left:6%;
+		filter:alpha(Opacity=60);
+		-moz-opacity:0.6;
+		opacity: 0.6;	
+	}
+.group{
+		background-color:black;
+		position:relative;
+		height:40.5%;
+		width:23%;
+		margin:5px 0px 0px 5px;
+		padding:0px;
+		float:right;
+		min-width:251px;
+		right:8%;
+		filter:alpha(Opacity=60);
+		-moz-opacity:0.6;
+		opacity: 0.6;		
+	}
+.fill1{
+		background-color:#FFBFCB;
+		position:relative;
+		height:565px;
+		width:5%;
+		margin:5px 0px 0px 5px;
+		padding:0px;
+		float:right;
+		right:8%;
+		filter:alpha(Opacity=80);
+		-moz-opacity:0.8;
+		opacity: 0.8;		
+	}
+.fill2{
+		background-color:#FFE212;
+		position:relative;
+		height:565px;
+		width:5%;
+		margin:5px 0px 0px 5px;
+		padding:0px;
+		float:right;
+		right:8%;
+		filter:alpha(Opacity=80);
+		-moz-opacity:0.8;
+		opacity: 0.8;		
+	}
+.essay{
+		background-color:black;
+		position:relative;
+		height:20%;
+		width:28%;
+		margin:10px 5px 0px 5px;
+		padding:0px;
+		float:left;
+		min-width:330px;
+		left:6%;
+		filter:alpha(Opacity=60);
+		-moz-opacity:0.6;
+		opacity: 0.6;
+	}
+.log{
+		background-color:white;
+		position:relative;
+		height:20%;
+		width:28%;
+		margin:5px 5px 0px 5px;
+		padding:0px;
+		float:left;
+		min-width:330px;
+		left:6%;
+		filter:alpha(Opacity=80);
+		-moz-opacity:0.8;
+		opacity: 0.8;	
+	}
 footer{
 		background-color:black;
 		position:fixed;
 		height:100px; 
 		width:100%;
-		margin:0px;
+		margin-top:0px;
 		padding:0px;
 		z-index:0;
-		bottom:0;
+		bottom:0px;
 	}
-#middle{
-		background-color:;
-		position:relative;
-		height:100%;
-		width:100%;
-		margin:0px;
-		padding:0px;
-	}
-
-#blog{
-		background-color:black;
-		position:relative;
-		height:100px;
-		width:150px;
-		margin:10px;
-		padding:0px;
-		float:left;
-	}
-#essay{
-		background-color:black;
-		position:relative;
-		height:100px;
-		width:150px;
-		margin:10px;
-		padding:0px;
-		float:left;
-	}
-#photography{
-		background-color:black;
-		position:relative;
-		height:100px;
-		width:150px;
-		margin:10px;
-		padding:0px;	
-		float:left;
-	}
-#me{
-		background-color:black;
-		position:relative;
-		height:100px;
-		width:150px;
-		margin:10px;
-		padding:0px;
-		float:left;
-	}
-#group{
-		background-color:black;
-		position:relative;
-		height:100px;
-		width:150px;
-		margin:10px;
-		padding:0px;
-		float:left;		
-	}
+.miku	{background-color:#99DD00; width:100%; height:5px; margin:0px; padding:0px; z-index:6; }
+.lin	{background-color:#FFA500; width:100%; height:5px; margin:0px; padding:0px; z-index:6; }
+.kaito	{background-color:#0000FF; width:100%; height:5px; margin:0px; padding:0px; z-index:6; }
+.meiko	{background-color:#D80000; width:100%; height:5px; margin:0px; padding:0px; z-index:6; }
